@@ -1,0 +1,126 @@
+body {
+    background-color: black;
+    color: #ffc773;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 199, 115, 0.5);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+#game-container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    margin-right: 25px;
+}
+
+label, p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="number"] {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffc773;
+    text-align: center;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff331b;
+    transform: translateY(-2px);
+}
+
+#result-section {
+    margin-top: 20px;
+}
+
+#result-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(255, 199, 115, 0.7);
+}
+
+#guess-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#guess-list li {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ffc773;
+    text-shadow: 0 0 5px rgba(255, 199, 115, 0.7);
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+#reset-game {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffc773;
+    color: #1a1a1a;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#reset-game:hover {
+    background-color: #e6b556;
+    transform: translateY(-2px);
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
