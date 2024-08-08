@@ -1,5 +1,6 @@
 let secretNumber;
 let guesses = [];
+const incorrectGuesses = document.getElementById("incorrect");
 
 document.getElementById('start-game').addEventListener('click', function() {
     const maxRange = document.getElementById('max-range').value;
@@ -19,8 +20,10 @@ document.getElementById('submit-guess').addEventListener('click', function() {
 
     if (guess < secretNumber) {
         message = 'Higher';
+        incorrectGuesses.innerText = `Incorrect Guesses: ${guesses.length}`;
     } else if (guess > secretNumber) {
         message = 'Lower';
+        incorrectGuesses.innerText = `Incorrect Guesses: ${guesses.length}`;
     } else {
         message = 'You guessed the number!';
         // Clear all previous guesses and show only the correct guess
@@ -50,6 +53,7 @@ document.getElementById('reset-game').addEventListener('click', function() {
     guesses = [];
 
     // Reset the HTML elements
+    incorrectGuesses.innerText = `Incorrect Guesses: 0`;
     document.getElementById('max-range').value = '';
     document.getElementById('guess').value = '';
     document.getElementById('guess-list').innerHTML = '';
